@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="MainPage.css">
+  </head>
+<body>
+  <div id="Main">
+    <div class="container-fluid" id="navigasi">
+      <nav class="navbar navbar-expand-lg navbar-white bg-white navbar fixed-top ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/logo/logoShopify.png" alt="Logo" width="200px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Lifestyle</a></li>
+                  <li><a class="dropdown-item" href="#">Hobby</a></li>
+                  <li><a class="dropdown-item" href="#">Beauty</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">More Category</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+              <div id="containerSearch">
+                <form class="d-flex ">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" w>
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </li>
+
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="CartPage.html">
+                  <img src="assets/logo/cart.png" alt="Shopping Cart" width="40px">
+                  <p id="itemTotal" style="display: inline-block;"></p>
+                </a>
+              </li>
+
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="#">
+                  <img src="assets/logo/uang.png" alt="Shopping Cart" width="40px">
+                  <p id="tempatSaldo" style="display: inline-block;"></p>
+                </a>
+              </li>
+              
+              </div>
+              <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <p id="aboutUser" style="display: inline-block;"></p>
+                <img src="assets/random/fotoProfil.png" alt="Foto Profil" width="40px" class="ms-1 me-1">
+                About Me
+              </a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">About Me!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col col-auto">
+                <img src="assets/random/fotoProfil.png" alt="Foto Profil" width="140px">
+              </div>
+              <div class="col">
+                <h2 style="margin-top: 33px; margin-left: 20px; font-size: 24px;">Hello! I'm,<br>Alvin Yohanes Kristianto</h2>
+              </div>
+            </div>
+            <div class="row" style="padding :15px;">
+              I'm the creator and author of this website. Currently, I'm pursuing my major in Computer Engineering at UMN. This website is created with love and a dash of creativity.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btnAbout" data-bs-dismiss="modal">Nice Ingfo</button>
+          </div>
+        </div>
+      </div>
+     </div>
+    
+    <div id="pageUtama">
+      <!-- sidebar -->
+      <div id="mySidenav" class="sidenav">
+        <div id="insideSidebar">
+
+          <a><p style="font-weight: bold; margin-left: 20px; margin-top: 20px; font-size: 25px;">Filters</p></a>
+
+          <a>
+            <div class="accordion" id="accordionPanelsStayOpen">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    Categories
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Iphone
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Ipad
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Macbook
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Mac
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Watch
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Airpods
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a>
+            <div class="accordion" id="accordionPanelsStayOpen">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Condition
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                  <div class="accordion-body">
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        New Stuff
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Second Hand
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a>
+            <div class="accordion" id="accordionPanelsStayOpen">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    Price
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse accordion-rawr" aria-labelledby="panelsStayOpen-headingThree">
+                  <div class="accordion-body">
+                    
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Rp</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Mininum" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Rp</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Maximum" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a>
+            <div class="accordion" id="accordionPanelsStayOpen">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                    Payment
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                  <div class="accordion-body">
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Cash on Delivery (COD)
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                          Moneyfy
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                          QRIS atau QYURIS
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                          Debit
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- isi page -->
+      <div id="pageJual">
+
+        <div id="carouselSlide">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/Banner Slide/bannerPromo.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Banner Slide/bannerPromo2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/Banner Slide/bannerPromo3.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="Card Jual">
+          <h2 style=" padding-right: 10px; padding-left: 10px; padding-bottom: 10px; padding-top: 20px; padding-bottom: 20px; display: inline-block;">Barang</h2>
+          <h2 style=" padding-right: 10px; padding-bottom: 10px; padding-top: 20px; padding-bottom: 20px; display: inline-block; color: green;">Terbaik</h2>
+          <h2 style=" padding-right: 10px; padding-bottom: 10px; padding-top: 20px; padding-bottom: 20px; display: inline-block;">sudah disediakan untuk mu!!</h2>
+          <div id="sectionList">
+            <ul id="listBarang">
+              <li>
+                <section class="product-container product-1">
+                  <div class="card">
+                    <div class="photo"><img src="assets/barang/iphone13promax.png" alt="Iphone 15 Pro Max" /></div>
+                    <div class="content">
+                      <h1 class="title">iPhone 13 Pro Max</h1>
+                      <h2 class="bg-title"></h2>
+                      <div class="feature spec">
+                        <p>Warna   : Sierra Blue <br> Storage : 512 GB</p>
+                      </div>
+                      <div class="feature harga">
+                        <p style="font-weight: bold;"> Rp. 16.999.000</p>
+                      </div>
+                      <button class="btn-buy" id="clickCard1">Add to Cart</button>
+                    </div>
+                  </div>
+                </section>
+              </li>
+              
+              <li>
+                <section class="product-container product-2">
+                  <div class="card">
+                    <div class="photo"><img src="assets/barang/iphone12.png" alt="Iphone 12" /></div>
+                    <div class="content">
+                      <h1 class="title">iPhone 12</h1>
+                      <h2 class="bg-title"></h2>
+                      <div class="feature spec">
+                        <p>Warna : Purple <br> Storage : 256 GB</p>
+                      </div>
+                      <div class="feature harga">
+                        <p style="font-weight: bold;"> Rp. 13.499.000</p>
+                      </div>
+                      <button class="btn-buy" id="clickCard2">Add to Cart</button>
+                    </div>
+                  </div>
+                </section>
+              </li>
+
+              <li>
+                <section class="product-container product-3">
+                  <div class="card">
+                    <div class="photo"><img src="assets/barang/ipadAirm1.png" alt="iPad Air M1" /></div>
+                    <div class="content">
+                      <h1 class="title">iPad Air M1</h1>
+                      <h2 class="bg-title"></h2>
+                      <div class="feature size">
+                        <p>Warna : Blue <br> Storage : 256 GB</p>
+                      </div>
+                      <div class="feature color">
+                        <p style="font-weight: bold;"> Rp. 9.499.000</p>
+                      </div>
+                      <button class="btn-buy" id="clickCard3">Add to Cart</button>
+                    </div>
+                  </div>
+                </section>
+              </li>
+
+              <li>
+                <section class="product-container product-4">
+                  <div class="card">
+                    <div class="photo"><img src="assets/barang/airpods pro.png" alt="Airpods Pro" /></div>
+                    <div class="content">
+                      <h1 class="title">Airpods Pro</h1>
+                      <h2 class="bg-title"></h2>
+                      <div class="feature spec">
+                        <p>Warna   : Putih</p>
+                      </div>
+                      <div class="feature harga">
+                        <p style="font-weight: bold;"> Rp. 3.299.000</p>
+                      </div>
+                      <button class="btn-buy" id="clickCard4">Add to Cart</button>
+                    </div>
+                  </div>
+                </section>
+              </li>
+
+              <li>
+                <section class="product-container product-5">
+                  <div class="card">
+                    <div class="photo"><img src="assets/barang/iphone15promax.png" alt="iPhone 15 Pro Max" /></div>
+                    <div class="content">
+                      <h1 class="title">iPhone 15 Pro Max</h1>
+                      <h2 class="bg-title"></h2>
+                      <div class="feature spec">
+                        <p>Warna : Natural Titanium <br> Storage : 1 TB</p>
+                      </div>
+                      <div class="feature harga">
+                        <p style="font-weight: bold;"> Rp. 33.999.000</p>
+                      </div>
+                      <button class="btn-buy" id="clickCard5">Add to Cart</button>
+                    </div>
+                  </div>
+                </section>
+              </li>
+
+              <li>
+                <section class="product-container product-6">
+                  <div class="card">
+                    <div class="photo"><img src="assets/barang/ipadPro2020.png" alt="iPad Pro 2020" /></div>
+                    <div class="content">
+                      <h1 class="title">iPad Pro 2020</h1>
+                      <h2 class="bg-title"></h2>
+                      <div class="feature spec">
+                        <p>Warna   : Space Grey <br> Storage : 1  TB</p>
+                      </div>
+                      <div class="feature harga">
+                        <p style="font-weight: bold;"> Rp. 32.499.000</p>
+                      </div>
+                      <button class="btn-buy" id="clickCard6">Add to Cart</button>
+                    </div>
+                  </div>
+                </section>
+              </li>
+
+              <li>
+                <section class="product-container product-7">
+                  <div class="card">
+                    <div class="photo"><img src="assets/barang/appleWatch3.png" alt="Apple Watch Series 3" /></div>
+                    <div class="content">
+                      <h1 class="title">Apple Watch Series 3</h1>
+                      <h2 class="bg-title"></h2>
+                      <div class="feature spec">
+                        <p>Warna   : Rose Gold</p>
+                      </div>
+                      <div class="feature harga">
+                        <p style="font-weight: bold;"> Rp. 3.299.000</p>
+                      </div>
+                      <button class="btn-buy" id="clickCard7">Add to Cart</button>
+                    </div>
+                  </div>
+                </section>
+              </li>
+
+              <li>
+                <section class="product-container product-8">
+                  <div class="card">
+                    <div class="photo"><img src="assets/barang/macbookm1.png" alt="MacBook Air M1" /></div>
+                    <div class="content">
+                      <h1 class="title">MacBook Air M1</h1>
+                      <h2 class="bg-title"></h2>
+                      <div class="feature spec">
+                        <p>Warna   : Gold <br> Storage : 512 GB</p>
+                      </div>
+                      <div class="feature harga">
+                        <p style="font-weight: bold;"> Rp. 18.999.000</p>
+                      </div>
+                      <button class="btn-buy" id="clickCard8">Add to Cart</button>
+                    </div>
+                  </div>
+                </section>
+              </li>
+              
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <script>
+    // Sidebar
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "320px";
+      document.getElementById("pageJual").style.marginLeft = "360px";
+    }
+
+    // supaya load pas dibuka
+    setTimeout(() => {
+      openNav()
+    }, 2000);
+    // Sidebar
+
+    // rapihin username biar ga makan tempat
+    let username = localStorage.getItem("username");
+    const spasi = username.indexOf(" "); 
+    if (spasi !== -1) { 
+    username = username.substring(0, spasi);
+    document.getElementById("aboutUser").textContent = `${username} ...`;
+    } else
+    document.getElementById("aboutUser").textContent = `${username}`;
+
+    //seeding data menjadi 0
+    const data = 0;
+    const jsonData = JSON.stringify(data);
+    localStorage.setItem("clickCard1", jsonData);
+
+    const data2 = 0;
+    const jsonData2 = JSON.stringify(data2);
+    localStorage.setItem("clickCard2", jsonData2);
+
+    const data3 = 0;
+    const jsonData3 = JSON.stringify(data3);
+    localStorage.setItem("clickCard3", jsonData3);
+
+    const data4 = 0;
+    const jsonData4 = JSON.stringify(data4);
+    localStorage.setItem("clickCard4", jsonData4);
+
+    const data5 = 0;
+    const jsonData5 = JSON.stringify(data5);
+    localStorage.setItem("clickCard5", jsonData5);
+
+    const data6 = 0;
+    const jsonData6 = JSON.stringify(data6);
+    localStorage.setItem("clickCard6", jsonData6);
+
+    const data7 = 0;
+    const jsonData7 = JSON.stringify(data7);
+    localStorage.setItem("clickCard7", jsonData7);
+
+    const data8 = 0;
+    const jsonData8 = JSON.stringify(data8);
+    localStorage.setItem("clickCard8", jsonData8);
+
+  </script>
+  <script src="olshop.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+#Main {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#containerSearch{
+  width: 500px;
+  margin-top: 6px;
+  margin-left: 20px;
+}
+
+#pageUtama {
+  margin-top: 80px;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+#pageJual {
+  padding: 20px;
+  border: 1px solid greenyellow;
+  border-radius: 6px;
+  display: inline-block;
+  width : 65.1em;
+  height: auto;
+  margin-left: 300px;
+  margin-top: 10px;
+}
+
+
+input:focus,
+button:focus,
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #fff;
+}
+
+.table tr,
+.table tr td {
+    vertical-align: middle;
+    padding: 10px 5px;
+}
+
+td input {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a {
+    color: #ff523b;
+    font-size: 12px;
+}
+
+th {
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background: #ff523b;
+    font-weight: normal;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-container .form-control {
+    max-width: 80px;
+    text-align: center;
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+#myTable .form-control {
+    width: auto;
+    display: inline-block;
+}
+
+.cart-qty-plus,
+.cart-qty-minus {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+
+}
+
+.cart-qty-plus:hover,
+.cart-qty-minus:hover {
+    background-color: #5161ce;
+    color: #Fff;
+
+}
+
+.product-img {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 4px;
+    padding: auto;
+}
+
+.product-img .img-product img {
+    width: 100%;
+}
+
+.checkoutBtn {
+    background-color: greenyellow;
+    border: 0.7px solid greenyellow;
+    border-radius: 4px;
+    transition: 0.1s;
+    cursor: pointer;
+    width: 400px;
+    transition: background 0.5s, border 0.5s; 
+}
+
+.checkoutBtn:hover{
+    background-color: green;
+    border-color: green;
+}
+
+.removeBtn {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    font-size: small;
+    color: #ff523b;
+}
+
+.kembali-button{
+    display: inline-block;
+    text-decoration: none;
+    background: greenyellow;
+    border: 0.2px solid greenyellow;
+    color: black;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.5s;
+    margin-right: 10px;
+    width: 150px;
+    height: 45px;
+    font-weight: bold;
+}
+
+.btnOut {
+    display: inline-block;
+    text-decoration: none;
+    background: greenyellow;
+    border: 0.2px;
+    border-color: greenyellow;
+    color: black;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.5s;
+    margin-right: 10px;
+    width: 75px;
+    height: 45px;
+    font-weight: bold;
+}
+  
+.kembali-button:hover, .btnOut:hover {
+    background: green;
+    color: white;
+}
+
+.btnAbout {
+    display: inline-block;
+    text-decoration: none;
+    background: greenyellow;
+    border: 0.2px;
+    border-color: greenyellow;
+    color: black;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.5s;
+    margin-right: 10px;
+    width: 130px;
+    height: 45px;
+    font-weight: bold;
+  }

@@ -1,0 +1,50 @@
+#loginBtn {
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  border: 0.2px;
+  border-color: greenyellow;
+  color: green;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.5s;
+  margin-right: 10px;
+  width: 80px;
+  height: 40px;
+  margin-left: 100px;
+}
+
+#loginBtn:hover {
+  background: green;
+  color: white;
+}
+
+body {
+  background: #ABCDEF;
+  font-family: Assistant, sans-serif;
+  display: flex;
+  min-height: 90vh;
+}
+.login {
+  color: green;
+  background: #136a8a;
+  background:
+    -webkit-linear-gradient(to right, #439775, #61d095);
+  background: 
+    linear-gradient(to right, #439775, #61d095);
+  margin: auto;
+  box-shadow: 
+    0px 2px 10px rgba(0,0,0,0.2), 
+    0px 10px 20px rgba(0,0,0,0.3), 
+    0px 30px 60px 1px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  padding: 50px;
+  width: 380px;
+  height: 320px;
+  padding: 50px;
+  border-radius: 10px;
+}
+

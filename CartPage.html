@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="CartPage.css">
+  </head>
+<body>
+  <div id="Main">
+    <div class="container-fluid" id="navigasi">
+      <nav class="navbar navbar-expand-lg navbar-white bg-white navbar fixed-top ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="MainPage.html">
+            <img src="assets/logo/logoShopify.png" alt="Logo" width="200px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Lifestyle</a></li>
+                  <li><a class="dropdown-item" href="#">Hobby</a></li>
+                  <li><a class="dropdown-item" href="#">Beauty</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">More Category</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+              <div id="containerSearch">
+                <form class="d-flex ">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" w>
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </li>
+
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="CartPage.html">
+                  <img src="assets/logo/cart.png" alt="Shopping Cart" width="40px">
+                  <p id="itemTotal" style="display: inline-block;">Shop Cart</p>
+                </a>
+              </li>
+
+              <li class="nav-item ms-2">
+                <a class="nav-link" href="#">
+                  <img src="assets/logo/uang.png" alt="Shopping Cart" width="40px">
+                  <p id="tempatSaldo" style="display: inline-block;"></p>
+                </a>
+              </li>
+              
+              </div>
+              <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <p id="aboutUser" style="display: inline-block;"></p>
+                <img src="assets/random/fotoProfil.png" alt="Foto Profil" width="40px" class="ms-1 me-1">
+                About Me
+              </a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+     <!-- Modal -->
+     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">About Me!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col col-auto">
+                <img src="assets/random/fotoProfil.png" alt="Foto Profil" width="140px">
+              </div>
+              <div class="col">
+                <h2 style="margin-top: 33px; margin-left: 20px; font-size: 24px;">Hello! I'm,<br>Alvin Yohanes Kristianto</h2>
+              </div>
+            </div>
+            <div class="row" style="padding :15px;">
+              I'm the creator and author of this website. Currently, I'm pursuing my major in Computer Engineering at UMN. This website is created with love and a dash of creativity.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btnAbout" data-bs-dismiss="modal">Nice Ingfo</button>
+          </div>
+        </div>
+      </div>
+     </div>
+    
+    <div id="pageUtama">
+
+      <!-- isi page -->
+      <div id="pageJual">
+        <h1>Ayo Segera Checkout!</h1>
+        <!--cart items details-->
+        <div class="container cart-page mb-12">
+          <table id="myTable" class="table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th class="text-right">
+                  <span id="amount" class="amount">Amount</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="cartItem1">
+              
+              </tr>
+              <tr id="cartItem2">
+
+              </tr>
+              <tr id="cartItem3">
+
+              </tr>
+              <tr id="cartItem4">
+
+              </tr>
+              <tr id="cartItem5">
+
+              </tr>
+              <tr id="cartItem6">
+
+              </tr>
+              <tr id="cartItem7">
+
+              </tr>
+              <tr id="cartItem8">
+
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <td colspan="4"></td>
+                <td align="right">
+                  <strong>TOTAL = <span id="total" class="total">0</span></strong>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4"></td>
+                <td>
+                  <button class="btn btn-primary checkoutBtn" type="submit" data-bs-toggle="modal" data-bs-target="#modalOut"><b>PROCEED TO CHECKOUT</b></button>
+                  <div id="modalContent">
+                    <div class="modal fade" id="modalOut" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Transaksi Berhasil!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body" id="usernamePop">
+                            <p>Selamat ${username}, Transaksi Anda Berhasil.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btnOut" data-bs-dismiss="modal">Close</button>
+                            <a href="MainPage.html" class="kembali-button">Belanja Lagi</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr> 
+            </tfoot>
+          </table>
+          <div id="manual"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // rapihin username biar ga makan tempat
+
+    const username = localStorage.getItem("username");
+    document.getElementById("usernamePop").textContent = `Selamat ${username}, Transaksi Anda Berhasil.`;
+
+    let username1 = localStorage.getItem("username");
+    const spasi = username1.indexOf(" "); 
+    if (spasi !== -1) { 
+    username1 = username1.substring(0, spasi);
+    document.getElementById("aboutUser").textContent = `${username} ...`;
+    } else
+    document.getElementById("aboutUser").textContent = `${username}`;
+  </script>
+
+  <script src="htpps://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="cart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
